@@ -70,12 +70,6 @@ subprojects {
             }
         }
     }
-
-    plugins.withType<SigningPlugin>().configureEach {
-        extensions.configure<SigningExtension> {
-            isRequired = isReleaseBuild
-        }
-    }
 }
 
 val clean by tasks.registering(type = Delete::class) {
