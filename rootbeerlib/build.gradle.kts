@@ -1,7 +1,6 @@
 plugins {
     alias(libs.plugins.android.library)
     `maven-publish`
-    signing
 }
 
 android {
@@ -92,10 +91,6 @@ publishing {
             }
         }
     }
-}
-
-signing {
-    sign(publishing.publications["release"])
 }
 
 private fun Project.findStringPropertyOrDefault(propertyName: String, default: String? = "") =
